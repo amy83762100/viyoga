@@ -1,0 +1,103 @@
+.practice-box {
+  width: 90%;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+
+.practice {
+  width: 90%;
+  //height: 50rem;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 8rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  line-height: 200%;
+  transform: skewX(-5deg);
+  @include respond(phone) {
+    padding: 3rem;
+    width: 100%;
+    transform: skewX(0);
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    line-height: 165%;
+  }
+
+  &__shape {
+    width: 35rem;
+    height: 35rem;
+    float: left;
+    transform: translateX(-3rem) skewX(5deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
+      -webkit-shape-outside: none;
+      shape-outside: none;
+      transform: translateX(0) skewX(0);
+      margin-bottom: 1rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+  &__text {
+    transform: skewX(5deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+    & h3 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      text-transform: none;
+      color: $color-primary;
+    }
+    &--p1 {
+      margin-bottom: 2rem;
+      color: $color-primary-light;
+    }
+    &--p2 {
+      color: $color-grey-dark-3;
+    }
+  }
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    &:hover {
+      opacity: 1;
+      transform: translate(-50%, -25%);
+    }
+  }
+  &:hover &__img {
+    transform: scale(1);
+    filter: brightness(1.15);
+  }
+}

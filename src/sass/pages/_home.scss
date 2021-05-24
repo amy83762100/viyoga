@@ -1,0 +1,162 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 20rem 0 5rem 0;
+  margin-top: -20vh;
+  z-index: 0;
+  @include respond(phone) {
+    margin-top: -15vh;
+  }
+  .about-content {
+    padding-left: 5rem;
+    @include respond(phone) {
+      padding: 0 0 3rem 0;
+    }
+  }
+}
+.section-practice {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 10;
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+.section-event {
+  background-color: $color-grey-light-1;
+  padding: 10rem 0 25rem 0;
+  @include respond(phone) {
+    padding: 6rem 0 18rem 0;
+  }
+  .event-content {
+    padding: 0 1rem 0 5rem;
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+}
+.section-courses {
+  padding: 20rem 0;
+  margin-top: -10rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-13-small.jpg);
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-13.jpg);
+  }
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  transform: skewY(-5deg);
+  & > * {
+    transform: skewY(5deg);
+  }
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+  @include respond(phone) {
+    padding: 5rem 0;
+  }
+  .heading-secondary {
+    color: $color-white;
+  }
+}
+.section-schedule {
+  margin-top: -8vh;
+  padding: 14rem 10rem 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-members {
+  background-color: $color-grey-light-1;
+  padding: 10rem 0;
+}
+.section-location {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient($color-grey-light-2, $color-white);
+  @include respond(phone) {
+    padding: 8rem 4rem;
+  }
+}
+.section-form {
+  padding: 10rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)
+  );
+  @include respond(tab-land) {
+    padding: 10rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem;
+  }
+  @include respond(phone) {
+    padding: 8rem 0;
+  }
+}
+.subscribe {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-5.jpg);
+  background-size: cover;
+  background-position: top center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.8);
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-5.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-5.jpg);
+  }
+  &__form {
+    width: 50%;
+    padding: 6rem;
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      padding: 3rem;
+    }
+  }
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}

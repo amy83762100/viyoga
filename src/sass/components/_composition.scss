@@ -1,0 +1,76 @@
+.composition {
+  position: relative;
+  height: 65vh;
+  @include respond(tab-land) {
+    height: 60vh;
+  }
+  @include respond(tab-port) {
+    height: 50vh;
+  }
+  @include respond(phone) {
+    height: 38vh;
+  }
+  &__photo {
+    width: 42%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1rem;
+    @include respond(phone) {
+      width: 45%;
+      outline-offset: 5px;
+    }
+
+    // @include respond(tab-port) {
+    //   float: left;
+    //   position: relative;
+    //   width: 33.33333333%;
+    //   box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    // }
+
+    &--p1 {
+      left: 3%;
+      top: 0;
+    }
+    &--p2 {
+      right: 7%;
+      top: 15%;
+
+      @include respond(phone) {
+        top: 0;
+        right: 3%;
+      }
+    }
+    &--p3 {
+      left: -1%;
+      bottom: 15%;
+
+      @include respond(phone) {
+        left: 3%;
+        bottom: 0;
+      }
+    }
+    &--p4 {
+      right: 11%;
+      bottom: 0;
+      @include respond(phone) {
+        right: 3%;
+      }
+    }
+    &:hover {
+      outline: 1.5rem solid $color-primary-light;
+      transform: scale(1.25) translateY(0.5rem);
+      box-shadow: box-shadow 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+      @include respond(phone) {
+        outline: 1rem solid $color-primary-light;
+      }
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+}

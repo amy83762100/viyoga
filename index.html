@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="src/img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    ></script>
+    <script defer src="src/js/controller.js"></script>
+    <title>Yoga with Viona</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link"
+              ><span>01</span>About Yoga</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-practice" class="navigation__link"
+              ><span>02</span>Practice With Me</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-event" class="navigation__link"
+              ><span>03</span>Event</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-courses" class="navigation__link"
+              ><span>04</span>Courses We Offer</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-schedule" class="navigation__link"
+              ><span>05</span>Class Schedule</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-location" class="navigation__link"
+              ><span>06</span>Where is Viona Yoga?</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-members" class="navigation__link"
+              ><span>07</span>Membership</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-location" class="navigation__link"
+              ><span>08</span>Where is Viona Yoga?</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-form" class="navigation__link"
+              ><span>09</span>Let's Get Connected!</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="header__navigation">
+      <a href="#">
+        <img src="src/img/logo-white.png" alt="Logo" class="header__logo" />
+      </a>
+      <ul class="menu">
+        <li class="nav_item">
+          <a class="nav_link" href="#section-about">Yoga</a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_link" href="#section-practice">Viona</a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_link" href="#section-event">Event</a>
+        </li>
+        <li class="nav_item">
+          <input
+            type="checkbox"
+            class="classes__checkbox"
+            id="classes-toggle"
+          />
+          <label for="classes-toggle" class="nav_link nav_link-btn"
+            >Classes</label
+          >
+          <ul class="menu__class">
+            <li class="nav_item">
+              <a class="nav_link" href="#section-courses">Courses</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="#section-schedule">Schedule</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="#section-members">Membership</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link" href="#section-location">location</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_item">
+          <a class="nav_link" href="#section-form ">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Yoga With Viona</span>
+          <span class="heading-primary--sub">To meet a happier you</span>
+        </h1>
+
+        <a
+          href="#section-about"
+          class="btn btn--white btn--animated toSectionAbout"
+          >Discover our tours</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="section-about" id="section-about">
+        <div class="u-center-text">
+          <h2 class="heading-secondary u-margin-bottom-big">About Yoga</h2>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="about-content">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Yoga is for everyone.
+              </h3>
+              <p class="paragraph">
+                It does not matter whether or not you're flexible. It is not
+                about touching your toes with your fingers. The main purpose of
+                Yoga is to come back to your body from your busy headspace.
+              </p>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                When was the last time you felt completely relaxed?
+              </h3>
+              <p class="paragraph">
+                Through uniting our body and mind, we will gradually increase
+                self-awareness, and release the tension and stress that we have
+                piled up throughout our daily lives. Yoga leads us to find inner
+                peace.
+              </p>
+
+              <a href="#section-courses" class="btn-text toSectionCourses"
+                >Courses We Offer &rarr;</a
+              >
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="slider">
+              <div class="slide">
+                <img
+                  srcset="
+                    src/img/nat-17.jpg       300w,
+                    src/img/nat-17-large.jpg 750w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  alt="Photo 17"
+                  class="introduce__box__pic"
+                  src="src/img/nat-17-large.jpg"
+                />
+              </div>
+
+              <div class="slide">
+                <img
+                  srcset="
+                    src/img/nat-19.jpg       300w,
+                    src/img/nat-19-large.jpg 750w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  alt="Photo 19"
+                  class="introduce__box__pic"
+                  src="src/img/nat-19-large.jpg"
+                />
+              </div>
+
+              <div class="slide">
+                <img
+                  srcset="
+                    src/img/nat-18.jpg       300w,
+                    src/img/nat-18-large.jpg 750w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  alt="Photo 18"
+                  class="introduce__box__pic"
+                  src="src/img/nat-18-large.jpg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  srcset="
+                    src/img/nat-20.jpg       300w,
+                    src/img/nat-20-large.jpg 750w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  alt="Photo 20"
+                  class="introduce__box__pic"
+                  src="src/img/nat-20-large.jpg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  srcset="
+                    src/img/nat-12.jpg       300w,
+                    src/img/nat-12-large.jpg 750w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  alt="Photo 12"
+                  class="introduce__box__pic"
+                  src="src/img/nat-12-large.jpg"
+                />
+              </div>
+
+              <button class="slider__btn slider__btn--left">
+                <svg class="slider__icon">
+                  <use href="src/img/sprite.svg#icon-circle-left"></use>
+                </svg>
+              </button>
+              <button class="slider__btn slider__btn--right">
+                <svg class="slider__icon">
+                  <use href="src/img/sprite.svg#icon-circle-right"></use>
+                </svg>
+              </button>
+              <div class="dots"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-practice" id="section-practice">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="src/img/video.mp4" type="video/mp4" />
+            <source src="src/img/video.webm" type="video/webm" />
+            Your browser is not supported!
+          </video>
+        </div>
+
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">Practice with me</h2>
+        </div>
+
+        <div class="practice-box section--hidden">
+          <div class="practice">
+            <figure class="practice__shape">
+              <img
+                src="src/img/nat-11.jpg"
+                alt="Person on a tour"
+                class="practice__img"
+              />
+              <figcaption class="practice__caption">Viona</figcaption>
+            </figure>
+            <div class="practice__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                My mission is to introduce more people to the benefits of real
+                yoga.
+              </h3>
+              <p class="practice__text--p1">
+                We live in an over-commercialized world - the concept of yoga
+                has been adapted to the modern society and lost its
+                authenticity.
+              </p>
+              <p class="practice__text--p2">
+                My yoga classes focus on guiding students to connect with their
+                body, to shift thesrc/ir busy mind to be in the present moment,
+                and to embrace themselves. May your journey with yoga lead you
+                to a path to meet a happier you.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-center-text u-margin-top-big">
+          <a href="#section-courses" class="btn-text toSectionCourses"
+            >More &rarr;</a
+          >
+        </div>
+      </section>
+      <section class="section-event" id="section-event">
+        <div class="u-center-text">
+          <h2 class="heading-secondary u-margin-bottom-big">
+            To Meet A Better You
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="event-content">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Charity Class
+              </h3>
+              <p class="paragraph">
+                I hold a charity class every Sunday at 4.30pm at Benjakitti
+                Park. The intention of my Sunday class is to introduce yoga to
+                anyone interested, as well as to connect beautiful spirits and
+                to spread positive energy, especially during this difficult
+                time.
+              </p>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">Soi Dog</h3>
+              <p class="paragraph">
+                All classes are on a donation basis, the money collected will be
+                donated to Soi Dog, where I adopted my little cutie cat
+              </p>
+
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="btn-text"
+                >Join me for Sunday classes &rarr;</a
+              >
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="composition">
+              <!-- <img
+                srcset="src/img/nat-1.jpg 800w, src/img/nat-1-large.jpg 1500w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 20vw, 300px"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+                src="src/img/nat-1-large.jpg"
+              />
+
+              <img
+                srcset="src/img/nat-2.jpg 300w, src/img/nat-2-large.jpg 900w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 20vw, 300px"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+                src="src/img/nat-2-large.jpg"
+              />
+
+              <img
+                srcset="src/img/nat-3.jpg 300w, src/img/nat-3-large.jpg 900w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 20vw, 300px"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+                src="src/img/nat-3-large.jpg"
+              />
+              <img
+                srcset="src/img/nat-4.jpg 300w, src/img/nat-4-large.jpg 900w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 20vw, 300px"
+                alt="Photo 4"
+                class="composition__photo composition__photo--p4"
+                src="src/img/nat-4-large.jpg"
+              /> -->
+
+              <img
+                src="src/img/nat-1-large.jpg"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="src/img/nat-2-large.jpg"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="src/img/nat-3-large.jpg"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+              <img
+                src="src/img/nat-4-large.jpg"
+                alt="Photo 4"
+                class="composition__photo composition__photo--p4"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-courses" id="section-courses">
+        <div class="row">
+          <div class="u-center-text">
+            <h2 class="heading-secondary u-margin-bottom-big">
+              COURSES WE OFFER
+            </h2>
+          </div>
+          <div class="col-1-of-3">
+            <div class="courses-box section--hidden">
+              <svg class="courses-box__icon">
+                <use href="src/img/sprite.svg#icon-pranayama" />
+              </svg>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Pranayama (Breathing)
+              </h3>
+              <p class="courses-box__text">
+                Energizing & Cleansing: Kapalabhati, Bhastrika Calming: Ujjayi,
+                Nadi Shodhana
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="courses-box section--hidden">
+              <svg class="courses-box__icon">
+                <use href="src/img/sprite.svg#icon-meditation"></use>
+              </svg>
+              <h3 class="heading-tertiary u-margin-bottom-small">Meditation</h3>
+              <p class="courses-box__text">
+                Relaxation & Healing: Body Scan, Yoga Nidhra Self-reflection:
+                Self-Compassion, Gratitude
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="courses-box section--hidden">
+              <svg class="courses-box__icon">
+                <use href="src/img/sprite.svg#icon-yoga"></use>
+              </svg>
+              <h3 class="heading-tertiary u-margin-bottom-small">Yoga Flow</h3>
+              <p class="courses-box__text">
+                Flow & Movement, Strength & Balance, Flexibility & Mindfulness,
+                Chakra & Healing
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-schedule" id="section-schedule">
+        <h2 class="heading-secondary">Class Schedule</h2>
+        <div class="schedule">
+          <div class="schedule__top">
+            <div class="date">
+              <p>Tuseday<br />07:00pm-08:00pm</p>
+            </div>
+            <div class="class">
+              <p class="class__title">Yin Yoga</p>
+              <p class="class__content">Relaxation & Healing</p>
+            </div>
+            <div class="date">
+              <p>Saturday<br />09:00am-10:00am</p>
+            </div>
+            <div class="class">
+              <p class="class__title">Park Yoga</p>
+              <p class="class__content">Creative Flow</p>
+            </div>
+          </div>
+          <div class="schedule__mid">
+            <svg class="schedule__icon">
+              <use href="src/img/sprite.svg#icon-pushpin"></use>
+            </svg>
+            <svg class="schedule__icon">
+              <use href="src/img/sprite.svg#icon-pushpin"></use>
+            </svg>
+            <svg class="schedule__icon">
+              <use href="src/img/sprite.svg#icon-pushpin"></use>
+            </svg>
+            <svg class="schedule__icon">
+              <use href="src/img/sprite.svg#icon-pushpin"></use>
+            </svg>
+            <svg class="schedule__icon-end">
+              <use href="src/img/sprite.svg#icon-play3"></use>
+            </svg>
+          </div>
+          <div class="schedule__bottom">
+            <div class="class">
+              <p class="class__title">Vinyasa Flow</p>
+              <p class="class__content">Energizing & Empowering</p>
+            </div>
+            <div class="date">
+              <p>Wednesday<br />07:00pm-08:00pm</p>
+            </div>
+            <div class="class">
+              <p class="class__title">Hatha Yoga</p>
+              <p class="class__content">Presence & Balance</p>
+            </div>
+            <div class="date">
+              <p>Sunday<br />04:30pm-05:30pm</p>
+            </div>
+          </div>
+        </div>
+        <p class="schedule__note">
+          Note: Class schedule is subject to change without prior notice.
+        </p>
+      </section>
+      <section class="section-members" id="section-members">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">Membership</h2>
+        </div>
+
+        <div class="members">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--1">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"
+                  >Group Class</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>5 Course</li>
+                  <li>Lesson duration: 60 min</li>
+                  <li>Valid Period: 1 months</li>
+                  <li>Price: THB1850 pp.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$370</p>
+                  <p class="card__price-only">per/course</p>
+                  <p class="card__discont">
+                    * First-time members are<br />eligible for 10% discount
+                  </p>
+                </div>
+                <a
+                  href="#popup"
+                  class="btn btn--white btn--white--small"
+                  data--course="5"
+                  >Book now!</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--2">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"
+                  >Group Class</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>10 Course</li>
+                  <li>Lesson duration: 60 min</li>
+                  <li>Valid Period: 3 months</li>
+                  <li>Price: THB3500 pp.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$350</p>
+                  <p class="card__price-only">per/course</p>
+                  <p class="card__discont">
+                    * First-time members are<br />eligible for 10% discount
+                  </p>
+                </div>
+                <a
+                  href="#popup"
+                  class="btn btn--white btn--white--small"
+                  data--course="10"
+                  >Book now!</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--3">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"
+                  >Group Class</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>20 Course</li>
+                  <li>Lesson duration: 60 min</li>
+                  <li>Valid Period: 6 months</li>
+                  <li>Price: THB6600 pp.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$330</p>
+                  <p class="card__price-only">per/course</p>
+                  <p class="card__discont">
+                    * First-time members are<br />eligible for 10% discount
+                  </p>
+                </div>
+                <a
+                  href="#popup"
+                  class="btn btn--white btn--white--small"
+                  data--course="20"
+                  >Book now!</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--4">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"
+                  >Group Class</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>30 Course</li>
+                  <li>Lesson duration: 60 min</li>
+                  <li>Valid Period: 8 months</li>
+                  <li>Price: THB9000 pp.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$300</p>
+                  <p class="card__price-only">per/course</p>
+                  <p class="card__discont">
+                    * First-time members are<br />eligible for 10% discount
+                  </p>
+                </div>
+                <a
+                  href="#popup"
+                  class="btn btn--white btn--white--small"
+                  data--course="30"
+                  >Book now!</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--5">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--2"
+                  >Private Class</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>Lesson duration: 60 min</li>
+                  <li>Price: THB1500 per person</li>
+                  <li>Please contact me for more details</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$1500</p>
+                  <p class="card__price-only">per/person</p>
+                  <p class="card__discont">
+                    * First-time members are<br />eligible for 10% discount
+                  </p>
+                </div>
+                <a
+                  href="#popup"
+                  class="btn btn--white btn--white--small"
+                  data--course="0"
+                  >Contact Me!</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-center-text">
+          <a
+            href="https://www.eventbrite.com/o/viona-32133135369"
+            target="_blank"
+            class="btn btn--green u-margin-top-big"
+            >Drop In</a
+          >
+        </div>
+      </section>
+      <section class="section-location" id="section-location">
+        <h2 class="heading-secondary">Where Is Viona</h2>
+        <div class="location__content">
+          <div class="location__text">
+            <p class="location__address">Oakwood Suites Bangkok 8th floor</p>
+            <p class="location__note">
+              Note: On-site changing rooms and lockers are available.
+            </p>
+          </div>
+          <div id="map"></div>
+        </div>
+      </section>
+      <section class="section-form" id="section-form">
+        <div class="row">
+          <div class="subscribe">
+            <div class="subscribe__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Let's Get Connected</h2>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+                <p class="form__group form__experience">
+                  Tell us your experience with yoga to let us accommodate you
+                  better:
+                </p>
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="new"
+                      name="experience"
+                    />
+                    <label for="new" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      I'm new
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="below"
+                      name="experience"
+                    />
+                    <label for="below" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Below 1 year
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="above"
+                      name="experience"
+                    />
+                    <label for="above" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Above 1 year
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <button class="btn btn--green">Subscribe &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+          <source
+            srcset="
+              src/img/logo-green-small-1x.png 1x,
+              src/img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="src/img/logo-green-1x.png 1x, src/img/logo-green-2x.png 2x"
+            alt="Full logo"
+            src="src/img/logo-green-2x.png"
+          />
+        </picture>
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a
+                  href="#https://www.instagram.com/vionayoga/"
+                  class="footer__link"
+                  >About Viona</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#https://www.instagram.com/vionayoga/"
+                  class="footer__link"
+                  >Contact us</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  href="https://www.eventbrite.com/o/viona-32133135369"
+                  target="_blank"
+                  class="footer__link"
+                  >More Event</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">Copyright © 2021-2022 Viona Zhang.</p>
+        </div>
+      </div>
+    </footer>
+    <div class="popup hidden" id="popup">
+      <div class="popup__content">
+        <a href="#section-members" class="popup__close">&times;</a>
+        <div class="popup__left">
+          <img src="src/img/nat-12.jpg" alt="Tour photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <form action="#" class="form">
+            <h2 class="heading-secondary u-margin-bottom-small popup--title">
+              Start booking now
+            </h2>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              We will contact you as soon as we receive your order
+            </h3>
+
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Full name"
+                id="name"
+                required
+              />
+              <label for="name" class="form__label">Full name</label>
+            </div>
+
+            <div class="form__group">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Email address"
+                id="email"
+                required
+              />
+              <label for="email" class="form__label">Email address</label>
+            </div>
+            <p class="form__group form__experience">
+              Tell us your experience with yoga to let us accommodate you
+              better:
+            </p>
+            <div class="form__group u-margin-bottom-medium">
+              <select class="form__input form__input-experience">
+                <option value="new" selected>I'm new</option>
+                <option value="below">Below 1 year</option>
+                <option value="below">Above 1 year</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <button class="btn btn--green btn--submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
