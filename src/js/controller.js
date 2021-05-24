@@ -111,7 +111,6 @@ const scrollToEffect = function () {
 
   const scrollSmooth = function (event) {
     event.preventDefault();
-    //console.log(event.target);
     const id = event.target.getAttribute("href");
     //document.querySelector(id).scrollIntoView({ behavior: "smooth" });
     const coords = document.querySelector(id).getBoundingClientRect();
