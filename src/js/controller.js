@@ -1,4 +1,5 @@
 'use strict';
+let logo = 'favicon.8076570f.png';
 
 const nav = document.querySelector('.header__navigation');
 const sliders = function () {
@@ -181,7 +182,7 @@ const loadMap = function () {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
   const viyogaIcon = L.icon({
-    iconUrl: 'src/img/fav.png',
+    iconUrl: logo,
 
     iconSize: [50, 50], // size of the icon
     iconAnchor: [25, 50], // point of the icon which will correspond to marker's location
