@@ -237,13 +237,19 @@
               </div>
 
               <button class="slider__btn slider__btn--left">
-                <svg class="slider__icon">
-                  <use href="src/img/sprite.svg#icon-circle-left"></use>
+                <svg class="slider__icon" id="icon-circle-left">
+                  <use
+                    href="src/img/sprite.svg"
+                    data-anchor="icon-circle-left"
+                  ></use>
                 </svg>
               </button>
               <button class="slider__btn slider__btn--right">
                 <svg class="slider__icon">
-                  <use href="src/img/sprite.svg#icon-circle-right"></use>
+                  <use
+                    href="src/img/sprite.svg#icon-circle-right"
+                    id="icon-circle-right"
+                  ></use>
                 </svg>
               </button>
               <div class="dots"></div>
