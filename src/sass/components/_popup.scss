@@ -60,7 +60,7 @@
     @include respond(tab-port) {
       @include absCenter;
       width: 100%;
-      z-index: -1;
+      z-index: 0;
       opacity: 30%;
     }
   }
@@ -72,6 +72,7 @@
     padding: 3rem 5rem;
     @include respond(tab-port) {
       width: 100%;
+      z-index: 1;
       background-image: linear-gradient(
         to bottom,
         $color-white,

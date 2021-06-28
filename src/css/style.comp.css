@@ -60,7 +60,7 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 37.5em) {
     html {
-      font-size: 40%; } }
+      font-size: 43%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -523,7 +523,7 @@ body {
       margin: 0 auto; }
       .card__details ul li {
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1.32rem;
         padding: 1rem 0; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
@@ -554,8 +554,8 @@ body {
         font-size: 4.25rem; } }
   .card__discont {
     margin-top: 2rem;
-    font-size: 1.4rem;
-    font-weight: 100; }
+    font-size: 1.5rem;
+    font-weight: 300; }
   @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     .card__side--front {
       width: 59%;
@@ -857,7 +857,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        z-index: -1;
+        z-index: 0;
         opacity: 30%; } }
   .popup__right {
     width: 66.666667%;
@@ -867,6 +867,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .popup__right {
         width: 100%;
+        z-index: 1;
         background-image: linear-gradient(to bottom, #fff, transparent, #fff); } }
   .popup__img {
     width: 100%; }
@@ -874,7 +875,7 @@ body {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 2.8rem;
   display: inline-block;
   border-radius: 10rem;
   transition: all 0.2s;
@@ -914,7 +915,7 @@ body {
     background-color: #7ba79d; }
 
 .btn::after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 100%;
   width: 100%;
