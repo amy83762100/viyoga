@@ -722,7 +722,8 @@
         <div class="row">
           <div class="subscribe">
             <div class="subscribe__form">
-              <form action="#" class="form">
+              <form action="https://formspree.io/f/mleapybe" method="POST" class="form">
+                <input type="hidden" id="formType" name="formType" value="subscribe">
                 <div class="u-margin-bottom-medium">
                   <h2 class="heading-secondary">Let's Get Connected</h2>
                 </div>
@@ -733,6 +734,7 @@
                     class="form__input"
                     placeholder="Full name"
                     id="name"
+                    name="name"
                     required
                   />
                   <label for="name" class="form__label">Full name</label>
@@ -744,6 +746,7 @@
                     class="form__input"
                     placeholder="Email address"
                     id="email"
+                    name="email"
                     required
                   />
                   <label for="email" class="form__label">Email address</label>
@@ -759,6 +762,8 @@
                       class="form__radio-input"
                       id="new"
                       name="experience"
+                      value="I'm new"
+                      checked
                     />
                     <label for="new" class="form__radio-label">
                       <span class="form__radio-button"></span>
@@ -771,6 +776,7 @@
                       class="form__radio-input"
                       id="below"
                       name="experience"
+                      value="Below 1 year"
                     />
                     <label for="below" class="form__radio-label">
                       <span class="form__radio-button"></span>
@@ -784,6 +790,7 @@
                       class="form__radio-input"
                       id="above"
                       name="experience"
+                      value="Above 1 year"
                     />
                     <label for="above" class="form__radio-label">
                       <span class="form__radio-button"></span>
@@ -859,7 +866,8 @@
           <img src="src/img/nat-12.jpg" alt="Tour photo" class="popup__img" />
         </div>
         <div class="popup__right">
-          <form action="#" class="form">
+          <form action="https://formspree.io/f/mleapybe" method="POST" class="form">
+            <input type="hidden" id="courseType" name="courseType" value="courseType">
             <h2 class="heading-secondary u-margin-bottom-small popup--title">
               Start booking now
             </h2>
@@ -873,6 +881,7 @@
                 class="form__input"
                 placeholder="Full name"
                 id="name-pop"
+                name="name"
                 required
               />
               <label for="name-pop" class="form__label">Full name</label>
@@ -884,6 +893,7 @@
                 class="form__input"
                 placeholder="Email address"
                 id="email-pop"
+                name="email"
                 required
               />
               <label for="email-pop" class="form__label">Email address</label>
@@ -893,15 +903,15 @@
               better:
             </p>
             <div class="form__group u-margin-bottom-medium">
-              <select class="form__input form__input-experience">
-                <option value="new" selected>I'm new</option>
-                <option value="below">Below 1 year</option>
-                <option value="below">Above 1 year</option>
+              <select class="form__input form__input-experience" name="experience">
+                <option value="I'm new" selected>I'm new</option>
+                <option value="below 1 year">Below 1 year</option>
+                <option value="above 1 year">Above 1 year</option>
               </select>
             </div>
 
             <div class="form__group">
-              <button class="btn btn--green btn--submit">Submit</button>
+              <button type="submit" class="btn btn--green btn--submit">Submit</button>
             </div>
           </form>
         </div>

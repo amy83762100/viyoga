@@ -31,6 +31,7 @@
       display: inline-block;
       transition: all 0.2s;
       line-height: 1;
+      z-index: 10;
     }
     &:hover {
       color: $color-primary;

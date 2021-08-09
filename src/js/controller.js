@@ -244,7 +244,9 @@ const closeModal = function () {
       const popupTitle = document.querySelector('.popup--title');
       popupTitle.textContent =
         course === '0' ? `Contact Me` : `Booking - ${course} Course`;
-      //console.log(course);
+      const courseType = document.getElementById("courseType");
+      courseType.value = course === '0' ? `Private` : `Booking - ${course} Course`;
+      console.log(courseType.value);
     })
   );
 };
